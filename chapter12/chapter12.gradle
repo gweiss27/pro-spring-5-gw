@@ -1,0 +1,30 @@
+subprojects {
+    group 'com.apress.prospring5.gw.ch12'
+    apply plugin: 'java'
+
+    /* Task that copies all the dependencies under the build/libs directory */
+    task copyDependencies(type: Copy) {
+        from configurations.compile
+        into 'build/libs'
+    }
+
+    dependencies {
+        // We specify these dependencies for all submodules, expect the spring boot module
+        // that module defines its own
+        if (!project.name.contains("boot")) {
+            compile (spring.contextSupport) {
+                exclude module: 'spring-beans'
+                exclude module: 'spring-core'
+            }
+
+            // We exclude the 'hibernate transitive dependency
+            // to have control over the version used
+            compile (hibernate.tx) {
+                exclude group: 'org.hibernate', module: 'hibernate'
+            }
+            compile misc.slf4jJcl, misc.logback, misc.lang3, hibernate.core, misc.guava
+        }
+        testCompile testing.junit
+    }
+}
+

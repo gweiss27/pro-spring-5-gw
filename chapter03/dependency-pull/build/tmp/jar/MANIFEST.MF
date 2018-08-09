@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Specification-Title: Pro Spring 5 Practice
+Class-Path: hello-world-5.0-SNAPSHOT.jar spring-context-5.0.4.BUILD-SN
+ APSHOT.jar logback-classic-1.2.3.jar jcl-over-slf4j-1.7.25.jar spring
+ -aop-5.0.4.BUILD-SNAPSHOT.jar spring-beans-5.0.4.BUILD-SNAPSHOT.jar s
+ pring-expression-5.0.4.BUILD-SNAPSHOT.jar spring-core-5.0.4.BUILD-SNA
+ PSHOT.jar logback-core-1.2.3.jar slf4j-api-1.7.25.jar spring-jcl-5.0.
+ 4.BUILD-SNAPSHOT.jar
+Created-By: Gregory Weiss
+Main-Class: com.apress.prospring5.gw.ch03.DependencyPull
+

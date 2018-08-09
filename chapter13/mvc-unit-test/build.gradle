@@ -1,0 +1,12 @@
+dependencies {
+    compile project(':chapter13:integration-test')
+    testCompile testing.jmock
+}
+
+jar {
+    manifest {
+        attributes("Created-By"      : "Gregory Weiss",
+                "Specification-Title": "Pro Spring 5 Practice",
+                "Class-Path"         : configurations.compile.collect { it.getName() }.join(' '))
+    }
+}

@@ -1,0 +1,18 @@
+plugins {
+    id 'java'
+}
+
+dependencies {
+    compile project(':chapter02:hello-world')
+    compile spring.context, misc.slf4jJcl, misc.logback
+    testCompile testing.junit
+}
+
+jar {
+    manifest {
+        attributes("Created-By"         : "Gregory Weiss",
+                "Specification-Title": "Pro Spring 5 Practice",
+                "Main-Class"         : "com.apress.prospring5.gw.ch03.DependencyPull",
+                "Class-Path"         : configurations.compile.collect { it.getName() }.join(' '))
+    }
+}

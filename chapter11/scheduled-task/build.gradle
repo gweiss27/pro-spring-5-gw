@@ -1,0 +1,11 @@
+dependencies {
+    compile project(':chapter11:base-task')
+}
+
+jar {
+    manifest {
+        attributes("Created-By"      : "Gregory Weiss",
+                "Specification-Title": "Pro Spring 5",
+                "Class-Path"         : configurations.compile.collect { it.getName() }.join(' '))
+    }
+}

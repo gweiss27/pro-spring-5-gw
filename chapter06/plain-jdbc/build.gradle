@@ -1,0 +1,12 @@
+dependencies {
+    compile db.mysql
+}
+
+jar {
+    manifest {
+        attributes("Created-By"      : "Gregory Weiss",
+                "Specification-Title": "Pro Spring 5 Practice",
+                "Main-Class"         : "com.apress.prospring5.gw.ch06.PlainJdbcDemo",
+                "Class-Path"         : configurations.compile.collect { it.getName() }.join(' '))
+    }
+}

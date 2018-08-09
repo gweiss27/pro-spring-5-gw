@@ -1,0 +1,17 @@
+subprojects {
+    group 'com.apress.prospring5.gw.ch03'
+    apply plugin: 'java'
+
+    /*Task that copies all the dependencies under build/libs */
+    task copyDependencies(type: Copy) {
+        from configurations.compile
+        into 'build/libs'
+    }
+
+    dependencies {
+        compile spring.context
+        //compile misc.slf4jJcl
+        compile misc.logback
+        testCompile testing.junit
+    }
+}

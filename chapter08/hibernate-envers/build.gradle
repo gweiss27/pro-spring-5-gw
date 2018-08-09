@@ -1,0 +1,3 @@
+dependencies {
+    compile spring.aspects, spring.data, misc.guava, hibernate.envers
+}

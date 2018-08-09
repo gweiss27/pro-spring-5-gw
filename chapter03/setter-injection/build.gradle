@@ -1,0 +1,9 @@
+plugins {
+    id 'java'
+}
+
+dependencies {
+    compile project(':chapter02:hello-world')
+    compile spring.context, misc.slf4jJcl, misc.logback
+    testCompile testing.junit
+}

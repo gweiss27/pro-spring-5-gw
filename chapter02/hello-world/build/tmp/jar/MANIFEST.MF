@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Specification-Title: Pro Spring 5 Practice
+Class-Path: spring-context-5.0.4.BUILD-SNAPSHOT.jar jcl-over-slf4j-1.7
+ .25.jar logback-classic-1.2.3.jar spring-aop-5.0.4.BUILD-SNAPSHOT.jar
+  spring-beans-5.0.4.BUILD-SNAPSHOT.jar spring-expression-5.0.4.BUILD-
+ SNAPSHOT.jar spring-core-5.0.4.BUILD-SNAPSHOT.jar slf4j-api-1.7.25.ja
+ r logback-core-1.2.3.jar spring-jcl-5.0.4.BUILD-SNAPSHOT.jar
+Created-By: Gregory Weiss
+Main-Class: com.apress.prospring5.gw.ch02.HelloWorldSpringDI
+
